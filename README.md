@@ -14,3 +14,4 @@ BTOOLS provides the following services:
 - Ethereum transaction (via WEB APIs);
 - Crypto Currency SmartCard scripts for key generation and transaction signature.
 
+This software, allows a user to electronically sign documents. It first allows the user to generate a private/public key pair (the user signature) and to store the private key on a smartcard’s secure element, for use in the next step, which is the document signature. The Ethertrust company (www.ethertrust.com) can provide the smartcard.
