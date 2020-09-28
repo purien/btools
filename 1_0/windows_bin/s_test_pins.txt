@@ -1,0 +1,108 @@
+// s_test_pins.txt
+
+verbose 1
+test
+start
+
+// select 
+apdu 00 A4 04 00 06 01 02 03 04 05 00
+
+// write
+apdu 00D0 0000 01 A5
+// Read
+apdu 00B0 0000 01
+// Get Status
+apdu 0087 0000 06
+// ClearKeys 0
+apdu 0081 00 00 00
+// InitCurve 0
+apdu 0089 00 00 00
+// SetParameter 6 (PublicKey 0)
+apdu 0088 0600 41  04A6FC0C5F467C3DB8C1581805E7C62C5FAEA19063B01F5845AD68DE9D84385F321EBF3A26B29912418992DCDC1FE69C282EFF65860E109F53AD27A29624984B6A
+// GetParameter 6 (PublicKey 0)
+apdu 0088 0600 20  17439172198780D8635D1B2259FF35AC8AACCAE56D914D20C9B9D19D20D029DB
+
+// Verify Admin PIN
+apdu 0020 0001 08 31 30 30 30 30 30 30 30
+apdu 0020 0001 08 30 30 30 30 30 30 30 30
+
+// Verify User PIN
+apdu 0020 0000 04 31 30 30 30
+apdu 0020 0000 04 30 30 30 30
+
+// Verify User2 PIN
+apdu 0020 0002 04 31 30 30 30
+apdu 0020 0002 04 30 30 30 30
+
+// Change User PIN
+apdu 0024 0000 10 30 30 30 30 FF FF FF FF 31 31 31 31 FF FF FF FF
+// Test User PIN
+apdu 0020 0000 04 31 31 31 31
+// Block User PIN (3 wrong tries)
+apdu 0020 0000 04 30 30 30 30
+apdu 0020 0000 04 30 30 30 30
+apdu 0020 0000 04 30 30 30 30
+// User PIN is blocked
+apdu 0020 0000 04 31 31 31 31
+
+// Change User2 PIN
+apdu 0024 0002 10 30 30 30 30 FF FF FF FF 31 31 31 31 FF FF FF FF
+// Test User2 PIN
+apdu 0020 0002 04 31 31 31 31
+// Block User2 PIN (3 wrong tries)
+apdu 0020 0002 04 30 30 30 30
+apdu 0020 0002 04 30 30 30 30
+0020 0002 04 30 30 30 30
+// User2 PIN is blocked
+apdu 0020 0002 04 31 31 31 31
+
+// Verify Admin PIN
+apdu 0020 0001 08 30 30 30 30 30 30 30 30
+// User PIN is unblocked
+apdu 0020 0000 04 31 31 31 31
+// // User2 PIN is unblocked
+apdu 0020 0002 04 31 31 31 31
+
+// Verify Admin PIN and reset to default values User and User2 PINs
+apdu 0020 00FF 08 30 30 30 30 30 30 30 30
+
+// Verify User   PIN
+apdu 0020 0000 04 30 30 30 30
+// Verify User2 PIN
+apdu 0020 0002 04 30 30 30 30
+
+// Change Admin PIN
+apdu 0024 0001 10 30 30 30 30 30 30 30 30 31 30 30 30 30 30 30 30
+// Verify Admin Pin, bad value
+apdu 0020 0001 08 30 30 30 30 30 30 30 30
+// Wong Admin PIN, good value
+apdu 0020 0001 08 31 30 30 30 30 30 30 30
+// Change Admin PIN
+apdu 0024 0001 10 31 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+// Verify Admin PIN
+apdu 0020 0001 08 30 30 30 30 30 30 30 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+																																																																																																																																																																																																																																																																																																																							

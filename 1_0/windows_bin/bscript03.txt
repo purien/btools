@@ -1,0 +1,30 @@
+// bscript03.txt
+
+sequence ffffffff
+locktime 00000000
+
+nb_input 1
+
+input
+transaction 729E344A01E52C822BDFDEC61E28D6EDA02658D2E7D2B80A9B9029F41E212DDE
+index       1
+privkey     CE1DBAFD7D2E8983ED60E0E081632EB062737B1B1627AAAB276F2E037A74A081
+ 
+nb_output 2
+
+output "Hello World!"
+
+output
+fee 0.0005
+btc 0.002685
+adr 1KYSFr6CyTDMruu8wna981M4ziVyMwftcg
+
+
+
+
+
+
+
+
+
+

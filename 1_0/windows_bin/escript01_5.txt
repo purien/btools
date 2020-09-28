@@ -1,0 +1,13 @@
+// escript01_5.txt
+
+apdu_script ssign5.txt
+nonce       0
+gasPrice    21000000000
+gasLimit    40000 
+to          777A07BAB1C119D74545B82A8BE72BEAFF4D447B
+value       10000000000000000
+data
+
+
+
+

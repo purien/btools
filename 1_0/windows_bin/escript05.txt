@@ -1,0 +1,14 @@
+// escript05.txt
+
+apdu_script sapdu1.txt
+
+nonce     10
+gasPrice  21000000000
+gasLimit  40000 
+to        3f406a15095669e63df80d21d54d12bdfa214187
+value     10000000000000000
+data      "binwin.exe"
+
+
+
+
