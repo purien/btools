@@ -1,0 +1,22 @@
+// sstore5.txt
+verbose 1
+start
+// select 
+apdu 00A4040006 010203040500
+// Verify PinAdmin
+apdu 0020 0001 08 30 30 30 30 30 30 30 30
+// ClearKeys Key5
+apdu 0081 00 05 00
+// InitCurve 0, Key5
+apdu 0089 00 05 00
+// SetPublicKey Key5
+apdu 0088 06 05 41  04A6FC0C5F467C3DB8C1581805E7C62C5FAEA19063B01F5845AD68DE9D84385F321EBF3A26B29912418992DCDC1FE69C282EFF65860E109F53AD27A29624984B6A
+// SetPrivateKey Key5
+apdu 0088 07 05 20  17439172198780D8635D1B2259FF35AC8AACCAE56D914D20C9B9D19D20D029DB
+
+ 
+
+
+
+
+																																																																																																																																																																																																																																																																																																																							

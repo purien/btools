@@ -1,0 +1,18 @@
+// ssign5.txt
+
+verbose 1
+start
+// Select CCSC 
+apdu 00A4040006 010203040500
+// Verify UserPIN
+apdu 0020000004 30303030
+
+// Get PublicKey 5
+pub 3
+apdu 0084 0605 43
+
+// ECDSA Sign
+signature 2
+hash 5
+apdu 0080 0005 20
+

@@ -1,0 +1,27 @@
+// sgen5.txt
+verbose 1
+start
+// select 
+apdu 00A4040006 010203040500
+// Verify PinAdmin
+apdu 0020 0001 08 30 30 30 30 30 30 30 30
+// Curve 0 SECP256k1, Keys Generation index=5
+// ClearKeys Key5
+apdu 0081 00 05 00
+// InitCurve 0, Key5
+apdu 0089 00 05 00
+// GenerateKeysPair Key5
+apdu 0082 00 05 00
+// Dump KeysPair Key5
+apdu 0083 00 05 02
+// GetPublicKey Key5
+apdu 0084 06 05 00
+// GetPrivateKey Key5
+apdu 0084 07 05 00
+ 
+
+
+
+
+
+																																																																																																																																																																																																																																																																																																																							

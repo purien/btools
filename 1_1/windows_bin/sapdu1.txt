@@ -1,0 +1,21 @@
+verbose 1
+start
+// select AID= 010203040500
+apdu 00A4040006 010203040500
+// Verify UserPIN
+apdu 0020000004 30303030
+// index of PublicKey in the response
+pub 3
+// GetKeyParam
+apdu 0084 06 00 43
+// index of signature
+signature 2
+// index of hash to be signed in the request
+hash 5
+// Sign, KeyIndex=P2
+apdu 0080 00 00 20
+
+
+
+
+																																																																																																																																																																																																																																																																																																																																																																																				

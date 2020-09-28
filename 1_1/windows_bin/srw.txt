@@ -1,0 +1,16 @@
+verbose 1
+start
+// Select CCSC
+apdu 00A4040006 010203040500
+// Verify User2 PIN
+apdu 0020000204 30303030
+
+// maxsize 3072
+
+scsize 4
+apdu 00870000 06
+
+scwrite   hello.txt
+scread    hello2.txt
+scdisplay
+
