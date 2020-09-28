@@ -1,0 +1,53 @@
+// s_rw_test.txt
+
+verbose 1
+test
+start
+
+// Select AID
+apdu 00 A4 04 00 06 01 02 03 04 05 00
+
+// Write
+apdu 00D0 0000 01 A5
+// Read
+apdu 00B0 0000 01
+
+// Verfify Admin PIN
+apdu 0020 0001 08 30 30 30 30 30 30 30 30
+
+// Write
+apdu 00D0 0000 01 A5
+// Read
+apdu 00B0 0000 01
+// Write
+apdu 00D0 0C00  01 A5
+// Read
+apdu 00B0 0C00  10
+
+// select AID
+apdu 00 A4 04 00 06 01 02 03 04 05 00
+
+// Write
+apdu 00D0 0000 01 A5
+// Read
+apdu 00B0 0000 01
+// Verify User2 PIN
+apdu 0020 0002 04 30 30 30 30
+
+// Write
+apdu 00D0 0000 01 A5
+// Read
+apdu 00B0 0000 01
+// Read
+apdu 00B0 0B80 80
+
+// Write
+apdu 00D0 0C00 01 A5
+// Read
+apdu 00B0 0B80 81
+
+
+
+
+
+																																																																																																																																																																																																																																																																																																																							

@@ -1,0 +1,28 @@
+// bscript04.txt
+
+sequence ffffffff
+locktime 00000000
+
+nb_input 1
+
+input
+transaction 729E344A01E52C822BDFDEC61E28D6EDA02658D2E7D2B80A9B9029F41E212DDE
+index       1
+apdu_script sapdu.txt
+ 
+nb_output 2
+
+output "Hello World!"
+
+output
+btc 0.002685
+adr 1KYSFr6CyTDMruu8wna981M4ziVyMwftcg
+
+
+
+
+
+
+
+
+

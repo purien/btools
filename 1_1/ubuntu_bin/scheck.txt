@@ -1,0 +1,17 @@
+// scheck.txt
+verbose 1
+start
+// select 
+apdu 00A4040006 010203040500
+// UserPin= 0000
+apdu 0020 0000 04 30303030
+// Get Status 
+apdu 0087 0000 06
+
+ 
+
+
+
+
+
+																																																																																																																																																																																																																																																																																																																							
