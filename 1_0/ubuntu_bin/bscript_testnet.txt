@@ -1,0 +1,32 @@
+// bscript_testnet.txt
+
+sequence ffffffff
+locktime 00000000
+
+nb_input 1
+
+input
+transaction 9dfea78cf7067a473da571614c3382d361050fea4274bb8d2b18b7bbdc4af44f
+index       1
+apdu_script sapdu.txt
+ 
+nb_output 2
+
+output "binwin.exe"
+
+output
+btc 0.53
+adr mtekQi1EPrxo5TngwipB31VJTihSCTjxjk
+
+
+
+
+
+
+
+
+
+
+
+
+
